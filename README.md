@@ -25,4 +25,15 @@ Koodit ovat vapaasti hyödynnettävissä oppimiseen ja opetukseen.
 
 ---
 
-💡 Huom: Esimerkit on tehty opetuskäyttö edellä, joten koodin selkeys ja ymmärrettävyys on asetettu etusijalle.
+💡 Huom: Esimerkit on tehty opetuskäyttöön, joten koodin selkeys ja ymmärrettävyys on asetettu etusijalle.
+
+---
+
+## Avainsanoja
+
+- python
+- python esimerkit
+- python harjoitustehtävät
+- python quiz
+- ohjelmoinnin opetus
+- python beginner
