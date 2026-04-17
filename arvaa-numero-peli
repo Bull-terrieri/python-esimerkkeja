@@ -1,0 +1,48 @@
+## Harjoituksen kuvaus
+
+Tässä harjoituksessa toteutetaan yksinkertainen numeron arvauspeli Pythonilla. 
+Ohjelma arpoo satunnaisen luvun väliltä 1–100, ja käyttäjän tehtävänä on arvata luku mahdollisimman vähillä yrityksillä.
+
+Harjoituksen aikana opitaan muun muassa:
+- satunnaisten lukujen käyttöä (`random.randint`)
+- silmukan (`while`) käyttöä ohjelman toistuvaan suorittamiseen
+- käyttäjän syötteen lukemista ja käsittelyä
+- ehtolauseiden (`if / elif / else`) hyödyntämistä
+- ohjelman suorituksen ohjaamista (`break`)
+- virheiden käsittelyä (`try / except`) virheellisten syötteiden varalta
+
+Harjoitus havainnollistaa hyvin ohjelman loogista rakennetta ja virhetilanteiden huomioimista. 
+Koodia on helppo jatkokehittää esimerkiksi rajaamalla arvausten määrää tai lisäämällä pisteytys.
+
+------------------------------
+
+import random
+
+def arvaa_luku():
+    oikea_luku = random.randint(1, 100)  # Arvotaan satunnainen luku väliltä 1–100
+    arvauskerrat = 0
+
+    while True:
+        arvaus = int(input("Arvaa luku väliltä 1-100: "))
+        arvauskerrat += 1
+
+        if arvaus < oikea_luku:
+            print("Luku on suurempi, yritä uudelleen.")
+        elif arvaus > oikea_luku:
+            print("Luku on pienempi, yritä uudelleen.")
+        else:
+            print(f"Oikein! Arvasit luvun {oikea_luku} {arvauskerrat} yrityksellä.")
+            break
+
+arvaa_luku()
+``
+
+-----------------------------
+
+Voit parantaa koodia, jos ohjelmaan syötetään muuta kuin numneroita:
+
+try:
+    arvaus = int(input("Arvaa luku väliltä 1-100: "))
+except ValueError:
+    print("Syötä vain numero!")
+    continue
