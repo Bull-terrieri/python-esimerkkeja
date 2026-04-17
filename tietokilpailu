@@ -1,10 +1,11 @@
 ## Tietokilpailu (Quiz)
 
-Tämä Python-koodi toteuttaa yksinkertaisen tietokilpailun, jossa käyttäjä vastaa kysymyksiin ja saa palautteen vastauksistaan. Koodi on tehty opetuskäyttöön ja havainnollistaa muun muassa syötteiden käsittelyä, ehtolauseita ja ohjelman loogista rakennetta.
+Tämä Python-koodi toteuttaa yksinkertaisen tietokilpailun, jossa käyttäjä vastaa kysymyksiin ja saa palautteen vastauksistaan. 
+Koodi on tehty opetuskäyttöön ja havainnollistaa muun muassa syötteiden käsittelyä, ehtolauseita ja ohjelman loogista rakennetta.
 
 Esimerkki soveltuu hyvin ohjelmoinnin perusteiden harjoitteluun ja jatkokehittämisen pohjaksi.
 
----
+---------------------------------------
 
 print("Tervetuloa tietokilpailuun!")
 print("Vastaa seuraaviin kysymyksiin oikein voittaaksesi.")
