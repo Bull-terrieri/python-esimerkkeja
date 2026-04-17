@@ -1,0 +1,60 @@
+## Harjoituksen kuvaus
+
+Tässä harjoituksessa toteutetaan yksinkertainen sanan arvauspeli Pythonilla. 
+Ohjelma piilottaa ennalta määritellyn sanan ja käyttäjän tehtävänä on arvata sana kirjain kerrallaan rajatun yritysmäärän puitteissa.
+
+Harjoituksessa opetellaan silmukoiden ja ehtolauseiden käyttöä, listojen hyödyntämistä, 
+käyttäjän syötteiden käsittelyä sekä pelilogiikan toteuttamista vaiheittain.
+
+--------------------------------------------------
+
+def arvaa_sana():
+    sana = "pullasorsa"
+    oikein_arvatut = []
+    yritykset = 0
+    max_yritykset = 7
+
+    while True:
+        salattu_sana = ""
+        for kirjain in sana:
+            if kirjain in oikein_arvatut:
+                salattu_sana += kirjain
+            else:
+                salattu_sana += "_"
+
+        if salattu_sana == sana:
+            print(f"Oikein! Sana oli '{sana}'. Onneksi olkoon!")
+            break
+
+        print(f"Salattu sana: {salattu_sana}")
+        arvaus = input("Arvaa kirjain: ").lower()
+
+        if arvaus in sana:
+            if arvaus not in oikein_arvatut:
+                oikein_arvatut.append(arvaus)
+                print("Oikein! Jatka samaan malliin.")
+            else:
+                print("Olet jo arvannut tämän kirjaimen.")
+        else:
+            print("Väärin. Yritä uudelleen.")
+            yritykset += 1
+            if yritykset >= max_yritykset:
+                print("Hävisit pelin! Liikaa yrityksiä.")
+                break
+
+arvaa_sana()
+
+
+-------------------------------------------
+
+Voit parantaa koodia käsittelemään tilanteita, joissa käyttäjä painaa enteriä ilman kirjaimia:
+
+if not arvaus:
+    print("Syötä yksi kirjain.")
+    continue
+
+Tai jos haluat, että sanat valitaan randomisti:
+
+import random
+sanat = ["python", "koodi", "koulu", "opetus"]
+sana = random.choice(sanat)
